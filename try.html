@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Client Logo Carousel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #fceeee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .carousel {
+      width: 90%;
+      max-width: 600px;
+      overflow: hidden;
+      margin: 30px auto;
+      position: relative;
+      border-radius: 10px;
+    }
+
+    .logo-track {
+      display: flex;
+      width: calc(100% * 3); /* for 3 slides */
+      animation: slideAnim 9s infinite;
+    }
+
+    .logo-track img {
+      width: 100%;
+      object-fit: contain;
+      background: white;
+      padding: 20px;
+    }
+
+    @keyframes slideAnim {
+      0% { transform: translateX(0); }
+      33% { transform: translateX(-100%); }
+      66% { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Our Clients</h2>
+
+  <div class="carousel">
+    <div class="logo-track">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/UNICEF_Logo.png/800px-UNICEF_Logo.png" alt="UNICEF">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Coat_of_arms_of_Uganda.svg" alt="Ministry of Water and Environment">
+      <img src="/mnt/data/WhatsApp Image 2025-05-23 at 11.24.02_373004b1.jpg" alt="Client 3">
+    </div>
+  </div>
+
+</body>
+</html>
